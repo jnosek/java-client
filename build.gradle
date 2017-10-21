@@ -12,15 +12,15 @@ buildscript {
     }
 }
 
+
+
 allprojects {
     repositories {
-        mavenCentral()
         jcenter()
+        maven {
+            url 'http://clojars.org/repo'
+        }
+        mavenCentral()
         maven { url "https://jitpack.io" }
     }
 }
-
-task clean(type: Delete) {
-    delete rootProject.buildDir
-}
-

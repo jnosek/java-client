@@ -1,6 +1,4 @@
 apply plugin: 'java'
-apply plugin: 'com.github.dcendents.android-maven'
-group='com.github.mreram'
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
@@ -10,14 +8,3 @@ dependencies {
 
 }
 
-task makeJarClientSdk(type: Copy) {
-    from('build/intermediates/bundles/release/')
-    into('build/outputs/')
-    include('classes.jar')
-    rename ('classes.jar', 'signalR-client-sdk.jar')
-    into('release/') //you can change this directory where you want to copy your .jar
-}
-task clearJar(type: Delete) {
-    delete 'build/libs/signalR-client-sdk.jar'
-}
-makeJarClientSdk.dependsOn(clearJar, build)
