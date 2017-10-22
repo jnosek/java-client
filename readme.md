@@ -24,7 +24,7 @@ maven:
 <dependency>
    <groupId>com.github.mreram</groupId>
    <artifactId>java-client</artifactId>
-   <version>1.0.3</version>
+   <version>1.0.4</version>
 </dependency>
 ```
 gradle:
@@ -40,7 +40,7 @@ allprojects {
 ```	
 	Step 2. Add the dependency
 ```groovy	
-compile 'com.github.mreram:java-client:1.0.3'
+compile 'com.github.mreram:java-client:1.0.4'
 ```
 
 ## Documentation
